@@ -16,7 +16,7 @@ public class AssociateContactWithCompany extends BaseTest {
 
         CompaniesPage companiesPage = new LogInPage(driver)
                 .open()
-                .logInAs(properties.getProperty("email"), properties.getProperty("password"))
+                .logInAs(credentials.getProperty("email"), credentials.getProperty("password"))
                 .openContactsMenu()
                 .openCompaniesPage();
 

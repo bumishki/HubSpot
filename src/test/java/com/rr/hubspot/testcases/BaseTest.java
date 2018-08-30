@@ -22,12 +22,14 @@ public class BaseTest {
 
     public WebDriver driver;
     public Properties properties;
+    public Properties credentials;
     public Page page;
 
     @Before
 
     public void openBrowser() throws InterruptedException {
         initProperties();
+        initCredentials();
 
         System.setProperty("webdriver.chrome.driver", properties.getProperty("chromedriverUrl"));
 
@@ -51,7 +53,16 @@ public class BaseTest {
             properties.load(is);
         } catch (IOException e) {
         }
+    }
 
+    public void initCredentials() {
+
+        credentials = new Properties();
+        InputStream is = ClassLoader.getSystemResourceAsStream("credentials.properties");
+        try {
+            credentials.load(is);
+        } catch (IOException e) {
+        }
     }
 
 

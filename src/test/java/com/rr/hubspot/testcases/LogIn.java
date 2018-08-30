@@ -11,7 +11,7 @@ public class LogIn extends BaseTest {
     public void logInTest() throws InterruptedException {
 
         ReportsDashboardPage reportsDashboardPage = new LogInPage(driver).open()
-                        .logInAs(properties.getProperty("email"), properties.getProperty("password"));
+                        .logInAs(credentials.getProperty("email"), credentials.getProperty("password"));
 
         waitPageTitle("Reports dashboard");
         Assert.assertEquals(properties.getProperty("companyname"),  reportsDashboardPage.getAccountName());

@@ -11,7 +11,7 @@ public class SignOut extends BaseTest {
 
         LogInPage logInPage = new LogInPage(driver)
                 .open()
-                .logInAs(properties.getProperty("email"), properties.getProperty("password"))
+                .logInAs(credentials.getProperty("email"), credentials.getProperty("password"))
                 .openAccountMenu()
                 .clickSignOutButton();
 

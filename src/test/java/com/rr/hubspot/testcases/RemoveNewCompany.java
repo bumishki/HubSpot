@@ -10,7 +10,7 @@ public class RemoveNewCompany extends BaseTest {
     public void removeNewCreatedContactTest() throws InterruptedException {
 
         CompaniesPage companiesPage = new LogInPage(driver).open()
-                .logInAs(properties.getProperty("email"), properties.getProperty("password"))
+                .logInAs(credentials.getProperty("email"), credentials.getProperty("password"))
                 .openContactsMenu()
                 .openCompaniesPage();
 

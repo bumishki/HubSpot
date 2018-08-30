@@ -15,7 +15,7 @@ public class ChangeContactEmail extends BaseTest {
     public void changeContactEmailTest() throws InterruptedException {
 
         ContactInfoPage contactInfoPage = new LogInPage(driver).open()
-                .logInAs(properties.getProperty("email"), properties.getProperty("password"))
+                .logInAs(credentials.getProperty("email"), credentials.getProperty("password"))
                 .openContactsMenu()
                 .openContactsPage()
                 .openContactByName(properties.getProperty("newUserFirstName"),properties.getProperty("newUserLastName"));

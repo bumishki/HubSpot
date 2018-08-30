@@ -11,7 +11,7 @@ public class AddCityToCompany extends BaseTest {
     public void changeContactEmailTest() throws InterruptedException {
 
         CompaniesPage companiesPage = new LogInPage(driver).open()
-                .logInAs(properties.getProperty("email"), properties.getProperty("password"))
+                .logInAs(credentials.getProperty("email"), credentials.getProperty("password"))
                 .openContactsMenu()
                 .openCompaniesPage();
 
