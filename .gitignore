@@ -9,7 +9,7 @@
 
 # Properties #
 ###################
-*.properties
+credentials.properties
 
 # IntellijIdea files #
 ###################
