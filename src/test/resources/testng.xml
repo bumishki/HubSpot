@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="SmokeScenario" parallel="false">
+    <test name="SmokeScenario">
+        <packages>
+            <package name="com.rr.hubspot.tests.*"/>
+        </packages>
+    </test>
+</suite>
+
